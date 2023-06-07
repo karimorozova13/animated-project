@@ -1,0 +1,10 @@
+export const logo = "/images/pmLogo.svg";
+export const sea = "/images/sea.jpg";
+export const dolphin = "/images/dolphin.jpg";
+export const stairs = "/images/stairs.jpg";
+export const coral = "/images/coral.jpg";
+export const underSea = "/images/underSea.jpg";
+export const baloons = "/images/floor.jpg";
+export const baloonsSky = "/images/sky.jpg";
+export const cat = "/images/cat.gif";
+export const pm = "/images/pm.png";
