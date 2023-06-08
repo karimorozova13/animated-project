@@ -3,12 +3,15 @@ import React from "react";
 import { styled } from "styled-components";
 
 const Des = styled.p`
-  color: ${colors.mainText};
+  color: ${colors.mainWhite};
   font-size: 24px;
   text-align: center;
-  background-color: ${colors.mainWhite};
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 7px;
   border-radius: 10px;
+  font-weight: 700;
+  max-width: 700px;
+  margin: 0 auto;
 `;
 
 const About = () => {
