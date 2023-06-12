@@ -17,8 +17,15 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 export default function Home() {
   const { width } = useWindowSize();
   const offsetGallery = width < 425 ? 1.5 : 1.9;
-  const offsetLink = width < 325 ? 1.8 : 1.6;
+  const offsetLink = width < 425 ? 1.9 : 1.6;
   const factorLink = width < 325 ? 2.6 : 1.8;
+  const pages = width < 768 ? 3 : 2;
+  const data = [
+    "/images/stepNe.jpg",
+    "/images/step2.jpg",
+    "/images/step3.jpg",
+    "/images/step4.jpg",
+  ];
   return (
     <Parallax pages={3}>
       <ParallaxLayer
@@ -84,7 +91,7 @@ export default function Home() {
       <ParallaxLayer offset={1} speed={0.2} factor={1.8}>
         <ParallaxLayer offset={offsetGallery} speed={0.5} factor={2.2}>
           <div style={{ padding: "0 15px" }}>
-            <Gallery />
+            <Gallery data={data} />
           </div>
         </ParallaxLayer>
       </ParallaxLayer>

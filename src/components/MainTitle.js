@@ -4,7 +4,7 @@ import { styled } from "styled-components";
 
 const Title = styled.h1`
   color: ${colors.mainWhite};
-  font-size: 80px;
+  font-size: 60px;
   text-align: center;
   margin-bottom: 40px;
   @media only screen and (min-width: 992px) {

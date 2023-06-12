@@ -43,13 +43,7 @@ const Item = styled.li`
   }
 `;
 
-const Gallery = () => {
-  const data = [
-    "/images/stepNe.jpg",
-    "/images/step2.jpg",
-    "/images/step3.jpg",
-    "/images/step4.jpg",
-  ];
+const Gallery = ({ data }) => {
   return (
     <List>
       {data.map((el, idx) => {

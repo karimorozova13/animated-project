@@ -1,6 +1,6 @@
+import { colors } from "@/config/colors";
 import { pspBackground } from "@/config/images";
 import Link from "next/link";
-import React from "react";
 import { keyframes, styled } from "styled-components";
 
 const glowShadow = keyframes`
@@ -21,20 +21,26 @@ const Wrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* flex-direction: column; */
   padding: 60px 0;
   cursor: pointer;
 
   width: 100%;
   height: 200px;
-  /* background: url(/images/accCompBg.png) right 25% top -100px / cover no-repeat; */
-  background-color: yellow;
 
   a {
     font-size: 80px;
     text-align: center;
-    /* position: absolute;
-    left: 50%; */
+    color: ${colors.accent};
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @media only screen and (min-width: 992px) {
       font-size: 100px;
@@ -75,7 +81,7 @@ const ContainerInner = styled.div`
 const GalleryLink = () => {
   return (
     <Wrap>
-      {/* <ContainerVideo>
+      <ContainerVideo>
         <video
           src={pspBackground}
           autoPlay
@@ -84,11 +90,11 @@ const GalleryLink = () => {
           width="1200"
           height="360"
         />
-        <ContainerInner /> */}
-      <Link href={"/gallery"} target="_blank" rel="noopener noreferrer">
-        {"Visit Gallery"}
-      </Link>
-      {/* </ContainerVideo> */}
+        <ContainerInner />
+        <Link href={"/gallery"} target="_blank" rel="noopener noreferrer">
+          {"Visit Gallery"}
+        </Link>
+      </ContainerVideo>
     </Wrap>
   );
 };
