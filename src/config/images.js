@@ -1,19 +1,13 @@
 export const logo = "/images/pmLogo.svg";
-export const dolphin = "/images/dolphin.png";
+export const dolph = "/images/dolph.png";
 export const balloons = "/images/balloons.jpg";
-export const cat = "/images/cat.png";
-export const pm = "/images/pm.png";
-export const ladybag = "/images/ladybag.png";
+export const kitty = "/images/kitty.png";
+export const lady = "/images/lady.png";
 export const gif = "/images/pm.gif";
-export const butterfly1 = "/images/butterfly1.png";
-export const butterfly2 = "/images/butterfly2.png";
-export const butterflies = "/images/butterflies.png";
-export const pspBackground = "/images/yellow.mp4";
-export const bg = "/images/bg.jpg";
-export const cardBg = "/images/cardBg.jpg";
-export const umbrella = "/images/yellow.jpg";
-
-export const yellow = "/images/achira.jpg";
-
-export const cupid = "/images/cupid.png";
-export const bird = "/images/loveBird.png";
+export const butt1 = "/images/butt1.png";
+export const butt2 = "/images/butt2.png";
+export const butterfly = "/images/butterfly.png";
+export const pencils = "/images/pencils.jpg";
+export const yellowBg = "/images/yellowBg.jpg";
+export const cupidLove = "/images/cupidLove.png";
+export const birdLove = "/images/birdLove.png";
