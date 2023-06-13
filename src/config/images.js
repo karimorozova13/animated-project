@@ -1,6 +1,6 @@
 export const logo = "/images/pmLogo.svg";
 export const dolphin = "/images/dolphin.png";
-export const baloonsSky = "/images/sky.jpg";
+export const balloons = "/images/balloons.jpg";
 export const cat = "/images/cat.png";
 export const pm = "/images/pm.png";
 export const ladybag = "/images/ladybag.png";

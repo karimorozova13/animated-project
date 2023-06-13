@@ -2,7 +2,7 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import { useWindowSize } from "@/util/hooks/useWindowSize";
 import {
-  baloonsSky,
+  balloons,
   butterflies,
   cat,
   dolphin,
@@ -40,7 +40,7 @@ export default function Home() {
             factor={4.3}
             horizontal={true}
             style={{
-              backgroundImage: `url(${baloonsSky})`,
+              backgroundImage: `url(${balloons})`,
               backgroundSize: "cover",
             }}
           ></ParallaxLayer>
