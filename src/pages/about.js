@@ -10,7 +10,6 @@ import MainTitle from "@/components/MainTitle";
 const about = () => {
   const { width } = useWindowSize();
   const pages = width < 992 ? 3 : 2;
-  console.log(width);
   return (
     <>
       {width && (
