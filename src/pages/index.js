@@ -8,6 +8,14 @@ import AboutLink from "@/components/AboutLink";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 import MainTitle from "@/components/MainTitle";
+import { styled } from "styled-components";
+
+const Wrap = styled.div`
+  img.gif {
+    width: 15px;
+    margin-left: 70%;
+  }
+`;
 
 export default function Home() {
   const { width } = useWindowSize();
@@ -24,7 +32,7 @@ export default function Home() {
   ];
 
   return (
-    <>
+    <Wrap>
       {width && (
         <Parallax pages={pages}>
           <ParallaxLayer
@@ -111,6 +119,6 @@ export default function Home() {
           <Footer />
         </Parallax>
       )}
-    </>
+    </Wrap>
   );
 }
