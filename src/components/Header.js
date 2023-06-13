@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styled from "styled-components";
+import Link from "next/link";
 
 import { logo } from "@/config/images";
 
@@ -29,7 +30,9 @@ const Header = () => {
   return (
     <Wrap>
       <MainNav>
-        <Image alt={"Logo"} src={logo} width={100} height={100} priority />
+        <Link href={"/"}>
+          <Image alt={"Logo"} src={logo} width={100} height={100} priority />
+        </Link>
       </MainNav>
     </Wrap>
   );

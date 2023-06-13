@@ -15,7 +15,7 @@ const Backdrop = styled.div`
   background-color: rgba(0, 0, 0, 0.8);
 `;
 
-const Modal = ({ onClick }) => {
+const Modal = ({ onClick, children }) => {
   return (
     <Backdrop
       onClick={(e) => {
@@ -23,7 +23,9 @@ const Modal = ({ onClick }) => {
           onClick();
         }
       }}
-    ></Backdrop>
+    >
+      {children}
+    </Backdrop>
   );
 };
 

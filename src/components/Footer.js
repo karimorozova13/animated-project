@@ -1,8 +1,9 @@
-import { colors } from "@/config/colors";
-import React from "react";
 import { styled } from "styled-components";
+
+import { colors } from "@/config/colors";
+
 const Foot = styled.div`
-  position: absolute;
+  position: ${({ position }) => position};
   bottom: 0;
   left: 0;
   width: 100%;
@@ -16,9 +17,9 @@ const Foot = styled.div`
   }
 `;
 
-const Footer = () => {
+const Footer = ({ position = "absolute" }) => {
   return (
-    <Foot>
+    <Foot position={position}>
       <p>{`©${new Date().getFullYear()}. Created by Karine Morozova. All Rights Reserved.`}</p>
     </Foot>
   );

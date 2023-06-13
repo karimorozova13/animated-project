@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import Timeline from "@/components/Timeline";
 import MainTitle from "@/components/MainTitle";
 
-const gallery = () => {
+const about = () => {
   const { width } = useWindowSize();
   return (
     <Parallax pages={2}>
@@ -91,7 +91,7 @@ const gallery = () => {
       </ParallaxLayer>
       <ParallaxLayer offset={0.2} speed={0.2} factor={0.2}>
         <div style={{ padding: "0 15px" }}>
-          <MainTitle title={"Platon Morozov"} />
+          <MainTitle title={"Sweetheart)"} />
         </div>
       </ParallaxLayer>
 
@@ -100,4 +100,4 @@ const gallery = () => {
   );
 };
 
-export default gallery;
+export default about;

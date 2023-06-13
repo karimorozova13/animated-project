@@ -1,6 +1,6 @@
-import { colors } from "@/config/colors";
-import React from "react";
 import { styled } from "styled-components";
+
+import { colors } from "@/config/colors";
 
 const Des = styled.p`
   color: ${colors.mainWhite};

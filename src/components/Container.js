@@ -13,7 +13,6 @@ const Wrap = styled.div`
   justify-content: center;
   width: 100%;
   min-height: 100%;
-  border: 4px solid red;
 
   @media screen and (max-width: 767px) {
     flex-wrap: initial !important;

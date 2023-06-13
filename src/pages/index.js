@@ -1,8 +1,6 @@
-import About from "@/components/About";
-import Footer from "@/components/Footer";
-import Gallery from "@/components/Gallery";
-import GalleryLink from "@/components/GalleryLink";
-import MainTitle from "@/components/MainTitle";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+
+import { useWindowSize } from "@/util/hooks/useWindowSize";
 import {
   baloonsSky,
   butterflies,
@@ -11,21 +9,25 @@ import {
   gif,
   ladybag,
 } from "@/config/images";
-import { useWindowSize } from "@/util/hooks/useWindowSize";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+
+import About from "@/components/About";
+import AboutLink from "@/components/AboutLink";
+import Footer from "@/components/Footer";
+import Gallery from "@/components/Gallery";
+import MainTitle from "@/components/MainTitle";
 
 export default function Home() {
   const { width } = useWindowSize();
   const offsetGallery = width < 425 ? 1.5 : 1.9;
   const offsetLink = width < 425 ? 1.9 : 1.6;
   const factorLink = width < 325 ? 2.6 : 1.8;
-  const pages = width < 768 ? 3 : 2;
   const data = [
     "/images/stepNe.jpg",
     "/images/step2.jpg",
     "/images/step3.jpg",
     "/images/step4.jpg",
   ];
+
   return (
     <Parallax pages={3}>
       <ParallaxLayer
@@ -88,6 +90,16 @@ export default function Home() {
           style={{ display: "block", width: "50%", marginLeft: "30%" }}
         />
       </ParallaxLayer>
+      <ParallaxLayer offset={0.4} speed={0.2} factor={0.2}>
+        <div style={{ padding: "0 15px" }}>
+          <MainTitle title={"Platon Morozov"} />
+        </div>
+      </ParallaxLayer>
+      <ParallaxLayer offset={0.95} speed={0.5} factor={2}>
+        <div style={{ padding: "0 15px" }}>
+          <About />
+        </div>
+      </ParallaxLayer>
       <ParallaxLayer offset={1} speed={0.2} factor={1.8}>
         <ParallaxLayer offset={offsetGallery} speed={0.5} factor={2.2}>
           <div style={{ padding: "0 15px" }}>
@@ -95,26 +107,8 @@ export default function Home() {
           </div>
         </ParallaxLayer>
       </ParallaxLayer>
-
-      <ParallaxLayer
-        offset={0.5}
-        speed={0.5}
-        factor={2.5}
-        horizontal={true}
-      ></ParallaxLayer>
-
-      <ParallaxLayer offset={0.95} speed={0.5} factor={2}>
-        <div style={{ padding: "0 15px" }}>
-          <About />
-        </div>
-      </ParallaxLayer>
-      <ParallaxLayer offset={0.4} speed={0.2} factor={0.2}>
-        <div style={{ padding: "0 15px" }}>
-          <MainTitle title={"Platon Morozov"} />
-        </div>
-      </ParallaxLayer>
       <ParallaxLayer offset={offsetLink} speed={0.5} factor={factorLink}>
-        <GalleryLink />
+        <AboutLink />
       </ParallaxLayer>
 
       <Footer />

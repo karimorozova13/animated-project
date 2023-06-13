@@ -1,7 +1,8 @@
-import { colors } from "@/config/colors";
-import { pspBackground } from "@/config/images";
 import Link from "next/link";
 import { keyframes, styled } from "styled-components";
+
+import { colors } from "@/config/colors";
+import { pspBackground } from "@/config/images";
 
 const glowShadow = keyframes`
   0%,
@@ -78,7 +79,7 @@ const ContainerInner = styled.div`
   filter: blur(4px);
 `;
 
-const GalleryLink = () => {
+const AboutLink = () => {
   return (
     <Wrap>
       <ContainerVideo>
@@ -91,7 +92,7 @@ const GalleryLink = () => {
           height="360"
         />
         <ContainerInner />
-        <Link href={"/gallery"} target="_blank" rel="noopener noreferrer">
+        <Link href={"/about"} target="_blank" rel="noopener noreferrer">
           {"Visit Gallery"}
         </Link>
       </ContainerVideo>
@@ -99,4 +100,4 @@ const GalleryLink = () => {
   );
 };
 
-export default GalleryLink;
+export default AboutLink;

@@ -28,16 +28,8 @@ const Item = styled.li`
   img {
     width: 100%;
     height: 100% !important;
-    /* height: 100% !important;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0; */
     object-fit: cover;
     @media only screen and (min-width: 768px) {
-      /* height: calc(100% + 40px) !important; */
-
-      /* top: -40px; */
       left: 0;
     }
   }

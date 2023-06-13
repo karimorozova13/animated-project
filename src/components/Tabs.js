@@ -14,6 +14,7 @@ const TableSwitch = styled.div`
   position: relative;
   margin: 0 auto;
   max-width: 1010px;
+  margin-bottom: 50px;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -61,7 +62,7 @@ const TableSwitchData = styled.div`
     transition: all 0.15s linear;
     font-weight: ${({ isActiveTab }) => (isActiveTab ? "600" : "400")};
     font-size: ${({ isActiveTab }) => (isActiveTab ? "18px" : "16px")};
-    color: ${({ isActiveTab }) => (isActiveTab ? "#043b5c" : colors.mainBg)};
+    color: ${({ isActiveTab }) => (isActiveTab ? "#043b5c" : "#043b5c")};
   }
   &:hover {
     & p {

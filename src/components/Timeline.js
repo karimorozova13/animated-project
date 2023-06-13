@@ -1,15 +1,16 @@
-import { colors } from "@/config/colors";
-
-import React from "react";
 import { styled } from "styled-components";
 
-const TimeLine = styled.div`
+import { colors } from "@/config/colors";
+import Link from "next/link";
+
+const TimeLine = styled.ul`
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   max-width: 1010px;
   margin: 0 auto;
+  list-style: none;
   &::before {
     content: "";
     background-color: ${colors.mainAccent};
@@ -26,9 +27,10 @@ const TimeLine = styled.div`
   }
 `;
 
-const TimelineItem = styled.div`
+const TimelineItem = styled.li`
   width: 100%;
   position: relative;
+
   &:not(:last-child) {
     margin-bottom: 40px;
   }
@@ -37,28 +39,11 @@ const TimelineItem = styled.div`
       float: right;
     }
   }
-  /* &::after {
-    content: "";
-    display: block;
-    clear: both;
-  } */
-  /* @media only screen and (max-width: 767px) {
-    &:nth-child(even) {
-      .timeline-content {
-        float: none;
-      }
-    }
-
-    &:nth-child(odd) {
-      .timeline-content {
-      }
-    }
-  } */
 `;
 const TimelineContent = styled.div`
   position: relative;
   width: 45%;
-  padding: 44px 10px;
+  padding: 44px 10px 20px;
   border-radius: 4px;
   box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.18);
   background-color: rgba(255, 255, 255, 0.2);
@@ -66,7 +51,8 @@ const TimelineContent = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.2);
   p {
     font-weight: 700;
-    padding: 10px +5px;
+    padding: 10px 5px;
+    margin-bottom: 20px;
   }
   h2 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -78,10 +64,11 @@ const TimelineContent = styled.div`
     margin-left: 40px;
   }
 `;
-const TimelineImg = styled.div`
+const TimelineImg = styled.span`
   width: 30px;
   height: 30px;
   background-color: ${colors.mainAccent};
+  display: block;
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -92,30 +79,7 @@ const TimelineImg = styled.div`
     right: unset;
   }
 `;
-const TimelineCard = styled.div`
-  padding: 0 !important;
-
-  p {
-    padding: 0 20px;
-  }
-
-  a {
-    margin-left: 20px;
-  }
-`;
-const TimelineImgHeader = styled.div`
-  height: 150px;
-  position: relative;
-  margin-bottom: 20px;
-
-  h2 {
-    color: $text;
-    position: absolute;
-    bottom: 5px;
-    left: 20px;
-  }
-`;
-const Date = styled.div`
+const Date = styled.span`
   background-color: ${colors.accent};
 
   display: inline-block;
@@ -125,6 +89,35 @@ const Date = styled.div`
   top: 0;
   right: 0;
   border-radius: 4px;
+`;
+const Learn = styled.div`
+  font-size: 16px;
+  line-height: calc(24 / 14);
+  cursor: pointer;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 8px;
+  transition: background-color 250ms linear;
+
+  &::after {
+    content: "";
+    border: solid ${colors.mainWhite};
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 8px;
+    transform: rotate(-45deg);
+  }
+
+  a {
+    color: ${colors.mainWhite};
+    text-decoration: none;
+    font-weight: 500;
+  }
+  &:hover {
+    background-color: ${colors.accent};
+    opacity: 0.6;
+  }
 `;
 
 const Timeline = () => {
@@ -141,31 +134,41 @@ const Timeline = () => {
               "During his first year of life Platon transitions into an active explorer. He gradually learn to sit up, discover the art of turning and rolling over,master the skill of crawling. Alongside these physical achievements, he also embark on the exciting journey of transitioning from a liquid diet to solid foods"
             }
           </p>
-          <a href="/">{"More"}</a>
+          <Learn>
+            <Link href={"/timeline/first-year-life"}>{"See gallery"}</Link>
+          </Learn>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineImg />
 
         <TimelineContent className="timeline-content">
-          <h2>{"Small man"}</h2>
+          <h2>{"Pocket-sized guy"}</h2>
           <Date>{"2021-2022"}</Date>
           <p>
             {
               "With each wobbly stride he's transitioning from a crawler to a confident walker, ready to conquer new horizons. With the passing of time Platon blossoms into a curious individual, ready to take on the world beyond the comforts of home, so he venture into the realm of kindergarten..."
             }
           </p>
-          <a href="/">{"More"}</a>
+          <Learn>
+            <Link href={"/"}>{"See gallery"}</Link>
+          </Learn>
         </TimelineContent>
       </TimelineItem>{" "}
       <TimelineItem>
         <TimelineImg />
 
         <TimelineContent className="timeline-content">
-          <h2>{"Toddler"}</h2>
+          <h2>{"Ah, the toddler, nature's little tornado!"}</h2>
           <Date>{"2022-2023"}</Date>
-          <p>{"terrible"}</p>
-          <a href="/">{"More"}</a>
+          <p>
+            {
+              "Platon can go from angelic cherub to tiny tyrant in a matter of seconds. One moment, they're giving you the sweetest, slobbery kisses, and the next, they're throwing an epic tantrum because you gave them the wrong-colored cup. He'll attempt to communicate with exaggerated facial expressions, leaving me guessing whether he's demanding a banana or telling me an elaborate story about his day at the playground."
+            }
+          </p>
+          <Learn>
+            <Link href={"/"}>{"See gallery"}</Link>
+          </Learn>
         </TimelineContent>
       </TimelineItem>{" "}
     </TimeLine>
