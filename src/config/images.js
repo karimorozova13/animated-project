@@ -11,7 +11,9 @@ export const butterflies = "/images/butterflies.png";
 export const pspBackground = "/images/yellow.mp4";
 export const bg = "/images/bg.jpg";
 export const cardBg = "/images/cardBg.jpg";
-export const umbrella = "/images/lines.jpg";
+export const umbrella = "/images/yellow.jpg";
+
+export const yellow = "/images/achira.jpg";
 
 export const cupid = "/images/cupid.png";
 export const bird = "/images/loveBird.png";

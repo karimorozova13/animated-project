@@ -2,7 +2,7 @@ import Link from "next/link";
 import { keyframes, styled } from "styled-components";
 
 import { colors } from "@/config/colors";
-import { pspBackground } from "@/config/images";
+import { pspBackground, yellow } from "@/config/images";
 
 const glowShadow = keyframes`
   0%,
@@ -27,9 +27,12 @@ const Wrap = styled.div`
 
   width: 100%;
   height: 200px;
+  background-image: url(${yellow});
+  background-repeat: no-repeat;
+  background-size: cover;
 
   a {
-    font-size: 80px;
+    font-size: 48px;
     text-align: center;
     color: ${colors.accent};
     position: absolute;
@@ -44,7 +47,7 @@ const Wrap = styled.div`
     justify-content: center;
 
     @media only screen and (min-width: 992px) {
-      font-size: 100px;
+      font-size: 56px;
     }
   }
 `;
@@ -53,13 +56,6 @@ const ContainerVideo = styled.div`
   position: absolute;
   height: 200px;
   width: 100%;
-  background-color: yellow;
-
-  & video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 `;
 const ContainerInner = styled.div`
   position: absolute;
@@ -83,17 +79,9 @@ const AboutLink = () => {
   return (
     <Wrap>
       <ContainerVideo>
-        <video
-          src={pspBackground}
-          autoPlay
-          loop
-          muted
-          width="1200"
-          height="360"
-        />
         <ContainerInner />
         <Link href={"/about"} target="_blank" rel="noopener noreferrer">
-          {"Visit Gallery"}
+          {"His Journey through Life"}
         </Link>
       </ContainerVideo>
     </Wrap>

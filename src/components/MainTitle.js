@@ -4,7 +4,7 @@ import { colors } from "@/config/colors";
 
 const Title = styled.h1`
   color: ${colors.mainWhite};
-  font-size: 60px;
+  font-size: 48px;
   text-align: center;
   margin-bottom: 40px;
   @media only screen and (min-width: 992px) {

@@ -9,7 +9,7 @@ import Section from "@/components/Section";
 import Modal from "@/components/Modal";
 import Footer from "@/components/Footer";
 import { colors } from "@/config/colors";
-import { pspBackground, umbrella } from "@/config/images";
+import { pspBackground, umbrella, yellow } from "@/config/images";
 import Tabs from "@/components/Tabs";
 
 const scaleImage = keyframes`
@@ -26,21 +26,9 @@ const scaleImage = keyframes`
 `;
 
 const Wrap = styled.div`
-  /* background-image: url(${umbrella});
+  background-image: url(${yellow});
   background-repeat: no-repeat;
-  background-size: cover; */
-  overflow: hidden;
-  video {
-    position: fixed;
-
-    top: -410px;
-    z-index: -100;
-
-    /* top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%); */
-    /* offset: 1; */
-  }
+  background-size: cover;
 `;
 
 const List = styled.ul`
@@ -102,19 +90,6 @@ const year = ({ data, slug }) => {
 
   return (
     <Wrap>
-      <video
-        preload="yes"
-        autoPlay={true}
-        loop={false}
-        controls={true}
-        muted={true}
-        width="100%"
-        height="200%"
-        playsInline
-        src={pspBackground}
-      >
-        <source src={pspBackground} type="video/mp4" />
-      </video>
       <Section>
         <Container>
           <Tabs />
