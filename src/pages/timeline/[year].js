@@ -9,7 +9,7 @@ import Section from "@/components/Section";
 import Modal from "@/components/Modal";
 import Footer from "@/components/Footer";
 import { colors } from "@/config/colors";
-import { pspBackground, umbrella, yellow } from "@/config/images";
+import { yellowBg } from "@/config/images";
 import Tabs from "@/components/Tabs";
 
 const scaleImage = keyframes`
@@ -26,7 +26,7 @@ const scaleImage = keyframes`
 `;
 
 const Wrap = styled.div`
-  background-image: url(${yellow});
+  background-image: url(${yellowBg});
   background-repeat: no-repeat;
   background-size: cover;
 `;

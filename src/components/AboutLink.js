@@ -2,7 +2,7 @@ import Link from "next/link";
 import { keyframes, styled } from "styled-components";
 
 import { colors } from "@/config/colors";
-import { pspBackground, yellow } from "@/config/images";
+import { yellowBg } from "@/config/images";
 
 const glowShadow = keyframes`
   0%,
@@ -27,7 +27,7 @@ const Wrap = styled.div`
 
   width: 100%;
   height: 200px;
-  background-image: url(${yellow});
+  background-image: url(${yellowBg});
   background-repeat: no-repeat;
   background-size: cover;
 

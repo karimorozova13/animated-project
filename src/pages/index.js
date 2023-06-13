@@ -1,14 +1,7 @@
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import { useWindowSize } from "@/util/hooks/useWindowSize";
-import {
-  balloons,
-  butterflies,
-  cat,
-  dolphin,
-  gif,
-  ladybag,
-} from "@/config/images";
+import { balloons, butterfly, dolph, gif, kitty, lady } from "@/config/images";
 
 import About from "@/components/About";
 import AboutLink from "@/components/AboutLink";
@@ -57,40 +50,40 @@ export default function Home() {
           </ParallaxLayer>
           <ParallaxLayer offset={0.1} speed={0.8} style={{ opacity: 0.7 }}>
             <img
-              src={dolphin}
+              src={dolph}
               style={{ display: "block", width: "15%", marginLeft: "15%" }}
             />
             <img
-              src={ladybag}
+              src={lady}
               style={{ display: "block", width: "20%", marginLeft: "75%" }}
             />
           </ParallaxLayer>
           <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.5 }}>
             <img
-              src={dolphin}
+              src={dolph}
               style={{ display: "block", width: "30%", marginLeft: "70%" }}
             />
 
             <img
-              src={ladybag}
+              src={lady}
               style={{ display: "block", width: "20%", marginLeft: "5%" }}
             />
           </ParallaxLayer>
           <ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.7 }}>
             <img
-              src={cat}
+              src={kitty}
               style={{ display: "block", width: "20%", marginLeft: "70%" }}
             />
           </ParallaxLayer>
           <ParallaxLayer offset={2} speed={0.5} style={{ opacity: 0.7 }}>
             <img
-              src={cat}
+              src={kitty}
               style={{ display: "block", width: "20%", marginLeft: "10%" }}
             />
           </ParallaxLayer>
           <ParallaxLayer offset={1.9} speed={0.5} style={{ opacity: 0.7 }}>
             <img
-              src={butterflies}
+              src={butterfly}
               style={{ display: "block", width: "50%", marginLeft: "30%" }}
             />
           </ParallaxLayer>
