@@ -26,6 +26,7 @@ const about = () => {
 
           <ParallaxLayer offset={0.1} speed={0.8} style={{ opacity: 0.7 }}>
             <img
+              loading={"lazy"}
               src={butt1}
               style={{
                 display: "block",
@@ -35,11 +36,13 @@ const about = () => {
             />
             <img
               src={butt2}
+              loading={"lazy"}
               style={{ display: "block", width: "20%", marginLeft: "75%" }}
             />
           </ParallaxLayer>
           <ParallaxLayer offset={0.6} speed={0.8} style={{ opacity: 0.7 }}>
             <img
+              loading={"lazy"}
               src={cupidLove}
               style={{
                 display: "block",
@@ -55,6 +58,7 @@ const about = () => {
             style={{ opacity: 0.7 }}
           >
             <img
+              loading={"lazy"}
               src={birdLove}
               style={{ display: "block", width: width < 992 ? "55%" : "20%" }}
             />
@@ -66,25 +70,32 @@ const about = () => {
             style={{ opacity: 0.5 }}
           >
             <img
+              loading={"lazy"}
               src={butt2}
               style={{ display: "block", width: "30%", marginLeft: "70%" }}
             />
           </ParallaxLayer>
           <ParallaxLayer offset={1.2} speed={0.8} style={{ opacity: 0.5 }}>
             <img
+              loading={"lazy"}
               src={butt1}
               style={{ display: "block", width: "20%", marginLeft: "5%" }}
             />
           </ParallaxLayer>
           <ParallaxLayer offset={1.5} speed={0.5} style={{ opacity: 0.7 }}>
             <img
+              loading={"lazy"}
               src={cupidLove}
               style={{ display: "block", width: "40%", marginLeft: "60%" }}
             />
           </ParallaxLayer>
           <ParallaxLayer offset={2.5} speed={0.5} style={{ opacity: 0.7 }}>
             {width > 991 && (
-              <img src={birdLove} style={{ display: "block", width: "20%" }} />
+              <img
+                src={birdLove}
+                style={{ display: "block", width: "20%" }}
+                loading={"lazy"}
+              />
             )}
           </ParallaxLayer>
           <ParallaxLayer offset={0.6} speed={0.5} factor={2}>

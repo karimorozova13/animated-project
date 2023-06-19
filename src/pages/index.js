@@ -41,7 +41,7 @@ export default function Home() {
               backgroundSize: "cover",
             }}
           ></ParallaxLayer>
-          <ParallaxLayer
+          {/* <ParallaxLayer
             sticky={{ start: 0.01, end: 2.5 }}
             style={{
               textAlign: "right",
@@ -49,7 +49,7 @@ export default function Home() {
               width: "100%",
               height: 150,
             }}
-          />
+          /> */}
           <ParallaxLayer offset={0.1} speed={0.8} style={{ opacity: 0.7 }}>
             <img
               src={dolph}
