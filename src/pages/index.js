@@ -9,13 +9,9 @@ import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 import MainTitle from "@/components/MainTitle";
 import { styled } from "styled-components";
+import Image from "next/image";
 
-const Wrap = styled.div`
-  img.gif {
-    width: 15px;
-    margin-left: 70%;
-  }
-`;
+const Wrap = styled.div``;
 
 export default function Home() {
   const { width } = useWindowSize();
@@ -53,46 +49,51 @@ export default function Home() {
               width: "100%",
               height: 150,
             }}
-          >
-            <img src={gif} className={"gif"} />
-          </ParallaxLayer>
+          />
           <ParallaxLayer offset={0.1} speed={0.8} style={{ opacity: 0.7 }}>
             <img
               src={dolph}
               style={{ display: "block", width: "15%", marginLeft: "15%" }}
+              loading={"lazy"}
             />
             <img
               src={lady}
               style={{ display: "block", width: "20%", marginLeft: "75%" }}
+              loading={"lazy"}
             />
           </ParallaxLayer>
           <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.5 }}>
             <img
               src={dolph}
               style={{ display: "block", width: "30%", marginLeft: "70%" }}
+              loading={"lazy"}
             />
 
             <img
               src={lady}
               style={{ display: "block", width: "20%", marginLeft: "5%" }}
+              loading={"lazy"}
             />
           </ParallaxLayer>
           <ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.7 }}>
             <img
               src={kitty}
               style={{ display: "block", width: "20%", marginLeft: "70%" }}
+              loading={"lazy"}
             />
           </ParallaxLayer>
           <ParallaxLayer offset={2} speed={0.5} style={{ opacity: 0.7 }}>
             <img
               src={kitty}
               style={{ display: "block", width: "20%", marginLeft: "10%" }}
+              loading={"lazy"}
             />
           </ParallaxLayer>
           <ParallaxLayer offset={1.9} speed={0.5} style={{ opacity: 0.7 }}>
             <img
               src={butterfly}
               style={{ display: "block", width: "50%", marginLeft: "30%" }}
+              loading={"lazy"}
             />
           </ParallaxLayer>
           <ParallaxLayer offset={0.4} speed={0.2} factor={0.2}>
