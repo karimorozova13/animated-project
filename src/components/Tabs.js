@@ -9,7 +9,7 @@ const TableSwitch = styled.div`
   justify-content: flex-start;
   width: 100%;
   height: 50px;
-  border: 1px solid #043b5c;
+  border: 1px solid ${colors.tabsBorder};
   border-radius: 20px;
   position: relative;
   margin: 0 auto;
@@ -62,12 +62,11 @@ const TableSwitchData = styled.div`
     transition: all 0.15s linear;
     font-weight: ${({ isActiveTab }) => (isActiveTab ? "600" : "400")};
     font-size: ${({ isActiveTab }) => (isActiveTab ? "18px" : "16px")};
-    color: ${({ isActiveTab }) => (isActiveTab ? "#043b5c" : "#043b5c")};
+    color: ${colors.tabsBorder};
   }
   &:hover {
     & p {
       scale: ${({ isActiveTab }) => (isActiveTab ? "1" : "1.1")};
-      color: #043b5c;
       font-weight: ${({ isActiveTab }) => (isActiveTab ? "600" : "500")};
     }
   }
@@ -116,10 +115,14 @@ const ActiveTab = styled.div`
     width: calc(100% + 3px);
     height: calc(100% + 4px);
     border-radius: 25px;
-    background-color: #fde7f9;
-    background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
+    background-color: ${colors.tabsBg};
+    background-image: linear-gradient(
+      315deg,
+      ${colors.tabsBg} 0%,
+      ${colors.tabsGradient} 74%
+    );
 
-    box-shadow: 0px -0px 20px -2px rgba(4, 59, 92, 1);
+    box-shadow: 0px -0px 20px -2px ${colors.tabsShadow};
   }
   &::after {
     content: "";

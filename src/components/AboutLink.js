@@ -7,12 +7,12 @@ import { yellowBg } from "@/config/images";
 const glowShadow = keyframes`
   0%,
   100% {
-    box-shadow: 0 0 4px #B54DFF, 0 0 6px #B54DFF, 0 0 8px #B54DFF, 0 0 10px #ff00de,
-      0 0 12px #ff00de, 0 0 14px #ff00de, 0 0 16px #ff00de, 0 0 18px #ff00de;
+    box-shadow: 0 0 4px ${colors.linkShadowMain}, 0 0 6px ${colors.linkShadowMain}, 0 0 8px ${colors.linkShadowMain}, 0 0 10px ${colors.linkShadowSecondary},
+      0 0 12px ${colors.linkShadowSecondary}, 0 0 14px ${colors.linkShadowSecondary}, 0 0 16px ${colors.linkShadowSecondary}, 0 0 18px ${colors.linkShadowSecondary};
   }
   50% {
-    box-shadow: 0 0 2px #B54DFF, 0 0 3px #B54DFF, 0 0 4px #B54DFF, 0 0 5px #ff00de,
-      0 0 6px #ff00de, 0 0 7px #ff00de, 0 0 8px #ff00de, 0 0 9px #ff00de;
+    box-shadow: 0 0 2px ${colors.linkShadowMain}, 0 0 3px ${colors.linkShadowMain}, 0 0 4px ${colors.linkShadowMain}, 0 0 5px ${colors.linkShadowSecondary},
+      0 0 6px ${colors.linkShadowSecondary}, 0 0 7px ${colors.linkShadowSecondary}, 0 0 8px ${colors.linkShadowSecondary}, 0 0 9px ${colors.linkShadowSecondary};
   }
  
 
@@ -80,9 +80,7 @@ const AboutLink = () => {
     <Wrap>
       <ContainerVideo>
         <ContainerInner />
-        <Link href={"/about"} target="_blank" rel="noopener noreferrer">
-          {"His Journey through Life"}
-        </Link>
+        <Link href={"/about"}>{"His Journey through Life"}</Link>
       </ContainerVideo>
     </Wrap>
   );

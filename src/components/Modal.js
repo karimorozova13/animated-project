@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { colors } from "@/config/colors";
+
 const Backdrop = styled.div`
   position: fixed;
   width: 100vw;
@@ -12,7 +14,7 @@ const Backdrop = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: ${colors.modalBg};
 `;
 
 const Modal = ({ onClick, children }) => {

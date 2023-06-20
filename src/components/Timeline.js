@@ -45,17 +45,17 @@ const TimelineContent = styled.div`
   width: 45%;
   padding: 44px 10px 20px;
   border-radius: 4px;
-  box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.18);
-  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 25px -15px ${colors.timelineShadow};
+  background-color: ${colors.timilineBg};
   backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid ${colors.timilineBg};
   p {
     font-weight: 700;
     padding: 10px 5px;
     margin-bottom: 20px;
   }
   h2 {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid ${colors.timilineBg};
     padding-bottom: 10px;
   }
   @media screen and (max-width: 768px) {
@@ -83,7 +83,7 @@ const Date = styled.span`
   background-color: ${colors.accent};
 
   display: inline-block;
-  color: #fff;
+  color: ${colors.mainWhite};
   padding: 10px;
   position: absolute;
   top: 0;

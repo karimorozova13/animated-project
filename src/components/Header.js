@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 
 import { logo } from "@/config/images";
+import { colors } from "@/config/colors";
 
 const Wrap = styled.div`
   position: fixed;
@@ -16,7 +17,7 @@ const Wrap = styled.div`
   padding-top: 15px;
 
   img {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: ${colors.footerBg};
   }
 `;
 const MainNav = styled.div`

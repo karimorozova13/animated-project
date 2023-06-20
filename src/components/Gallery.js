@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { styled } from "styled-components";
 
+import { colors } from "@/config/colors";
+
 const List = styled.ul`
   list-style: none;
   display: flex;
@@ -18,7 +20,7 @@ const Item = styled.li`
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  box-shadow: ${colors.galleryShadow} 0px 20px 30px -10px;
   @media only screen and (min-width: 425px) {
     width: calc(100% / 2 - 10px / 2);
   }

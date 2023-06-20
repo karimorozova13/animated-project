@@ -6,7 +6,7 @@ const Des = styled.p`
   color: ${colors.mainWhite};
   font-size: 24px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: ${colors.desBg};
   padding: 7px;
   border-radius: 10px;
   font-weight: 700;

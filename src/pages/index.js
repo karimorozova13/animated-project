@@ -1,17 +1,13 @@
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import { useWindowSize } from "@/util/hooks/useWindowSize";
-import { balloons, butterfly, dolph, gif, kitty, lady } from "@/config/images";
+import { balloons, butterfly, dolph, kitty, lady } from "@/config/images";
 
 import About from "@/components/About";
 import AboutLink from "@/components/AboutLink";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 import MainTitle from "@/components/MainTitle";
-import { styled } from "styled-components";
-import Image from "next/image";
-
-const Wrap = styled.div``;
 
 export default function Home() {
   const { width } = useWindowSize();
@@ -28,7 +24,7 @@ export default function Home() {
   ];
 
   return (
-    <Wrap>
+    <>
       {width && (
         <Parallax pages={pages}>
           <ParallaxLayer
@@ -41,15 +37,6 @@ export default function Home() {
               backgroundSize: "cover",
             }}
           ></ParallaxLayer>
-          {/* <ParallaxLayer
-            sticky={{ start: 0.01, end: 2.5 }}
-            style={{
-              textAlign: "right",
-              paddingRight: 15,
-              width: "100%",
-              height: 150,
-            }}
-          /> */}
           <ParallaxLayer offset={0.1} speed={0.8} style={{ opacity: 0.7 }}>
             <img
               src={dolph}
@@ -120,6 +107,6 @@ export default function Home() {
           <Footer />
         </Parallax>
       )}
-    </Wrap>
+    </>
   );
 }
